@@ -17,6 +17,14 @@
 │   ├── holo-card-studio.md
 │   ├── tait-crt-interface-skill.md
 │   └── photo-flipbook-ui.md  # 待确认来源
+├── video-production/     # AI 视频制作
+│   ├── video-shotcraft.md
+│   ├── talkcraft.md
+│   └── anything2explainer.md
+├── design-tools/         # 设计质量与工具
+│   └── impeccable.md
+├── chrome-extensions/    # Chrome 插件
+│   └── ciphermind.md     # 待确认来源
 ├── ai-tools/             # AI 工具与平台
 │   └── AIPlanHub.md
 └── README.md
