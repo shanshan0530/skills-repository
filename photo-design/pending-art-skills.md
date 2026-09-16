@@ -37,6 +37,16 @@
 ### 7. photo-to-travel-sketch
 - 来源：视频提及
 - 推测方向：照片转旅行速写/素描
+- 搜索状态：未找到确切匹配（类似：Evianis/travel-photo-abstraction）
+
+### 8. afterimage-lavRainform
+- 来源：@AesthAI 提及
+- 推测方向：可能与 afterimage 或 lav（lavender）Rainform 相关
+- 搜索状态：未找到确切匹配
+
+### 9. promptcard
+- 来源：@地球Online NPC 提及
+- 推测方向：prompt 卡片/模板工具
 - 搜索状态：未找到确切匹配
 
 ## 建议

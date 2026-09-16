@@ -1,6 +1,6 @@
 # 艺术 Skills 索引 ｜ Art Skills Index
 
-## 已确认（13 个）
+## 已确认（15 个）
 
 | # | Skill | 仓库 | 分类 |
 |---|---|---|---|
@@ -15,22 +15,26 @@
 | 9 | photo-to-zine-postcard | Whiplashzeb/photo-to-zine-postcard | Zine 明信片 |
 | 10 | gc-minimal-zine-poster | LiamGvchi/gc-minimal-zine-poster | 极简 Zine 海报 |
 | 11 | reality-restaged | traveler0621/reality-restaged | 超现实电影化 |
-| 12 | photo-to-minimal-illustration | 待确认 | 极简插画 |
-| 13 | card-duo | 待确认 | 双卡片设计 |
+| 12 | photo-abstract-editorial | ZzzLc0405/photo-abstract-editorial | 抽象编辑插画 |
+| 13 | travel-photo-abstraction | Evianis/travel-photo-abstraction | 旅行照片抽象 |
+| 14 | photo-to-minimal-illustration | 待确认 | 极简插画 |
+| 15 | card-duo | 待确认 | 双卡片设计 |
 
-## 待确认（7 个）
+## 待确认（9 个）
 
 | # | Skill | 状态 |
 |---|---|---|
-| 14 | flash4start_light | 待确认 |
-| 15 | antibes-holiday | 待确认 |
-| 16 | create-pantone-photo | 待确认 |
-| 17 | silhouette-group-collage | 待确认 |
-| 18 | ZONE-Material-art | 待确认 |
-| 19 | skill-make-photo-stamp | 待确认 |
-| 20 | photo-to-travel-sketch | 待确认 |
+| 16 | flash4start_light | 待确认 |
+| 17 | antibes-holiday | 待确认 |
+| 18 | create-pantone-photo | 待确认 |
+| 19 | silhouette-group-collage | 待确认 |
+| 20 | ZONE-Material-art | 待确认 |
+| 21 | skill-make-photo-stamp | 待确认 |
+| 22 | photo-to-travel-sketch | 待确认 |
+| 23 | afterimage-lavRainform | 待确认 |
+| 24 | promptcard | 待确认 |
 
 ## 说明
 - 完整系列共 31 个艺术 Skill，视频中展示了 20 个
-- 已确认 13 个，待确认 7 个
+- 已确认 15 个，待确认 9 个
 - 欢迎提交 PR 补充未找到的 skill 信息
