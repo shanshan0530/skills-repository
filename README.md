@@ -11,37 +11,57 @@
 ├── frontend-design/      # 前端设计与开发
 │   ├── web-design-guidelines.md
 │   ├── design-taste-frontend.md
+│   ├── design-mobile-apps.md
 │   ├── image-to-code.md
 │   ├── awesome-design-md.md
-│   ├── design-mobile-apps.md
-│   └── impeccable.md
+│   ├── impeccable.md
+│   ├── threeui.md              # 3D 粒子/流体动效组件库
+│   └── 21st-dev.md             # React UI 组件库平台
 ├── creative-visual/      # 创意与视觉
-│   ├── holo-card-studio.md      ← layered-holo-card-skill
+│   ├── holo-card-studio.md
 │   ├── tait-crt-interface-skill.md
-│   └── photo-flipbook-ui.md
-├── photo-design/         # 照片与设计
-│   └── photo-to-zine-postcard.md
-├── video-production/     # AI 视频制作
+│   ├── photo-flipbook-ui.md
 │   ├── video-shotcraft.md
 │   ├── talkcraft.md
-│   ├── anything2explainer.md
-│   ├── image-to-video.md        ← 排行榜 #1
-│   ├── seedance-image-to-video.md ← 排行榜 #2
-│   ├── ai-image-generation.md   ← 排行榜 #3
-│   ├── seedance-reference-to-video.md ← 排行榜 #8
-│   ├── ai-video-generation.md   ← 排行榜 #9
-│   ├── reddit-automation.md     ← 排行榜 #5
-│   ├── video-edit.md            ← 排行榜 #6
-│   └── ai-music.md              ← 排行榜 #7
+│   └── anything2explainer.md
+├── photo-design/         # 照片与设计（艺术 Skill 系列）
+│   ├── art-skills-index.md     # 31 个艺术 Skill 索引
+│   ├── surreal-pop-collage.md
+│   ├── photo-riso-poster.md
+│   ├── eastern-ink-photo.md
+│   ├── selective-ink-sketch.md
+│   ├── vinyl-image-generator.md
+│   ├── heytea-style.md
+│   ├── scene-to-art-lab.md
+│   ├── travel-memory-sticker.md
+│   ├── photo-to-zine-postcard.md
+│   ├── gc-minimal-zine-poster.md
+│   ├── reality-restaged.md
+│   ├── photo-to-minimal-illustration.md  # 待确认
+│   ├── card-duo.md                      # 待确认
+│   ├── pending-art-skills.md            # 待确认列表
+│   └── ...
+├── video-production/     # AI 视频制作
+│   ├── image-to-video.md
+│   ├── seedance-image-to-video.md
+│   ├── ai-image-generation.md
+│   ├── wan-3-0-prime-reference-to-video.md
+│   ├── reddit-automation.md
+│   ├── video-edit.md
+│   ├── ai-music.md
+│   ├── seedance-reference-to-video.md
+│   └── ai-video-generation.md
 ├── design-tools/         # 设计质量与工具
 │   └── impeccable.md
 ├── token-optimization/   # Token 优化
-│   ├── caveman.md               ← 省token马尾辫skill
+│   ├── caveman.md
 │   └── rescue-tokens.md
 ├── chrome-extensions/    # Chrome 插件
-│   └── ciphermind.md
+│   └── ciphermind.md     # 待确认
 ├── ai-tools/             # AI 工具与平台
 │   └── AIPlanHub.md
+├── tools/                # 通用工具
+│   └── no-negative-echo.md
 └── README.md
 ```
 
