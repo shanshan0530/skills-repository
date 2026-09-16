@@ -20,47 +20,47 @@
 - 搜索状态：未找到确切匹配
 
 ### 4. y2k-pop-poster
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：Y2K 千禧波普海报风格
 - 搜索状态：未找到确切匹配
 
 ### 5. daily-photo-playground
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：每日照片 playground/实验场
 - 搜索状态：未找到确切匹配
 
 ### 6. paper-spirit-zine
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：纸张精神/灵魂 Zine 风格
 - 搜索状态：未找到确切匹配
 
 ### 7. photo-relic-editorial
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：照片遗物/ relic 编辑风格
 - 搜索状态：未找到确切匹配（类似：photo-abstract-editorial）
 
 ### 8. photo-to-travel-sketch
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：照片转旅行速写/素描
 - 搜索状态：未找到确切匹配（类似：Evianis/travel-photo-abstraction）
 
 ### 9. neil-quentin
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：可能与人物/肖像风格相关
 - 搜索状态：未找到确切匹配
 
 ### 10. kodak-2383-film-look
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：Kodak 2383 电影胶片风格模拟
 - 搜索状态：未找到确切 skill（类似：mono-color-skill 可部分实现）
 
 ### 11. pixel-style-poster-skill
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：像素风格海报 skill
 - 搜索状态：未找到确切匹配
 
 ### 12. skill-make-photo-stamp-archive
-- 来源：视频提及
+- 来源：抖音视频
 - 推测方向：照片转印章/图章效果，带归档功能
 - 搜索状态：未找到确切匹配
 
@@ -79,9 +79,26 @@
 - 推测方向：可能与表格/数据相关的 skill 集合
 - 搜索状态：未找到确切匹配
 
+### 16. 学习进度数据持久化 skill
+- 来源：@豆包 提及（第 3 个 skill）
+- 推测方向：支持学习进度保存、导入导出的数据持久化 skill
+- 搜索状态：未找到确切匹配
+- 类似参考：
+  - ** haddock-development/claude-reflect-system**：持续学习与自我改进技能系统，支持 export/import
+  - ** contextstream/mcp-server**：持久化记忆和跨会话学习
+
+### 17. Cloud Studio 部署 skill
+- 来源：@豆包 提及（第 4 个 skill）
+- 推测方向：Cloud Studio 部署网站、实现类 APP 访问的部署 skill
+- 搜索状态：未找到确切匹配
+- 类似参考：
+  - ** Azure Static Web Apps**：静态网站部署
+  - ** Cloudflare Pages**：静态网站部署
+  - ** pinme**：Deploy Your Frontend in a Single Command
+
 ## 建议
 - 如能提供作者、平台、截图或更多上下文，可进一步精确定位
 - 欢迎提交 PR 补充信息
 
 ## 分类标签
-`照片处理` `艺术` `待确认` `待补充`
+`照片处理` `艺术` `待确认` `待补充` `部署` `数据持久化`
