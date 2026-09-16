@@ -1,23 +1,45 @@
-# Create Photo Flipbook UI ｜ 照片翻书效果 UI
+# Create Photo Flipbook UI ｜ 照片转 Flipbook 相册
 
-## 来源
-- 用户提及：** create-photo-flipbook-ui**
+## 仓库
+- ** HaichaoLihc/create-photo-flipbook-ui**
 
-## 说明
-该项目在公开渠道（GitHub / 主流 Skill 目录）暂无明确对应仓库或 Skill 记录。
+## 功能描述
+Codex skill，将拍摄的照片转换成具有表达力的 photobooks（相册），使用自带的 **2D Book** runtime（bundled runtime）。
 
-## 推测方向
-从名称推断，可能涉及：
-- 照片自动生成翻书动画（Flipbook）效果的前端 UI 组件
-- 图片序列 / 3D 翻转交互
-- 移动端卡片翻转视觉特效
+### 核心特性
+- 输入：用户提供的照片
+- 输出：响应式 flipbook / photobook 网站
+- 自带 2D Book runtime（assets/html/）
+- 支持多种 UI 模板（ui-collections/）：
+  - **Library**：可重新排序的书架，3 本空 mock books
+  - **2D Book**：带示例照片展开页的 2D 翻书
+  - **3D Book 1**：React + WebGL 阅读器，深色舞台，弯曲页面
+  - **3D Book 2**：Three.js + Quick FlipBook 阅读器，浅色舞台，柔和阴影
+  - **Card Gallery**：可拖拽的卡片 gallery（ring / arc / stack / unfolded strip）
+  - **Image Atlas**：基于年份的同心圆环空间档案，主题搜索
+  - **Photo Ring**：Flat / Tilt / Ring / Gallery 布局切换
+  - **Film Negative Flipbook**：胶片档案 UI，页角预览，可拖动胶片条
+- 依赖 `photo-search` MCP 进行照片库搜索和语义搜索
+- 包含 Python adapter（scripts/photo_library.py）用于文件夹索引
 
-### 已知类似项目参考
-- ** broadinstitute/flipbook**：本地图像目录快速翻阅 + 记录笔记（偏数据可视化）
-- ** eren23/openflipbook**：AI 生成插图的翻书页面克隆（Next.js + FastAPI）
+### 工作流
+1. 提供照片
+2. 选择风格（默认：Source Serif 4 字体，纸张/布料纹理，可复用页面样式）
+3. Agent 自动生成翻书/相册
 
-## 建议
-- 如能提供更多上下文（作者、平台、截图），可进一步精确定位
+## 安装
+```bash
+npx skills add HaichaoLihc/create-photo-flipbook-ui
+```
+
+## 使用
+```
+Use $create-photo-flipbook-ui to turn these photographs into photobooks.
+```
+
+## 链接
+- [GitHub: HaichaoLihc/create-photo-flipbook-ui](https://github.com/HaichaoLihc/create-photo-flipbook-ui)
+- [3D Book 2 Demo](https://haichaolihc.github.io/create-photo-flipbook-ui/)
 
 ## 分类标签
-`创意` `前端` `UI组件` `动画` `翻书效果` `待确认`
+`创意` `前端` `照片处理` `翻书` `相册` `UI组件` `Codex` `3D` `WebGL` `Three.js`
