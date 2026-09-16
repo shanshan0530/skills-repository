@@ -12,19 +12,34 @@
 │   ├── web-design-guidelines.md
 │   ├── design-taste-frontend.md
 │   ├── image-to-code.md
-│   └── awesome-design-md.md
+│   ├── awesome-design-md.md
+│   ├── design-mobile-apps.md
+│   └── impeccable.md
 ├── creative-visual/      # 创意与视觉
-│   ├── holo-card-studio.md
+│   ├── holo-card-studio.md      ← layered-holo-card-skill
 │   ├── tait-crt-interface-skill.md
-│   └── photo-flipbook-ui.md  # 待确认来源
+│   └── photo-flipbook-ui.md
+├── photo-design/         # 照片与设计
+│   └── photo-to-zine-postcard.md
 ├── video-production/     # AI 视频制作
 │   ├── video-shotcraft.md
 │   ├── talkcraft.md
-│   └── anything2explainer.md
+│   ├── anything2explainer.md
+│   ├── image-to-video.md        ← 排行榜 #1
+│   ├── seedance-image-to-video.md ← 排行榜 #2
+│   ├── ai-image-generation.md   ← 排行榜 #3
+│   ├── seedance-reference-to-video.md ← 排行榜 #8
+│   ├── ai-video-generation.md   ← 排行榜 #9
+│   ├── reddit-automation.md     ← 排行榜 #5
+│   ├── video-edit.md            ← 排行榜 #6
+│   └── ai-music.md              ← 排行榜 #7
 ├── design-tools/         # 设计质量与工具
 │   └── impeccable.md
+├── token-optimization/   # Token 优化
+│   ├── caveman.md               ← 省token马尾辫skill
+│   └── rescue-tokens.md
 ├── chrome-extensions/    # Chrome 插件
-│   └── ciphermind.md     # 待确认来源
+│   └── ciphermind.md
 ├── ai-tools/             # AI 工具与平台
 │   └── AIPlanHub.md
 └── README.md

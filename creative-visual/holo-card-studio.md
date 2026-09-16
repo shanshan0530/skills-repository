@@ -2,6 +2,7 @@
 
 ## 仓库
 - ** EverettFish/holo-card-studio**
+- 别名：layered-holo-card-skill
 
 ## 功能描述
 用 AI 生成的画作 + Blender + Three.js，创建交互式 3D 全息收藏卡网站。
@@ -25,4 +26,4 @@
 - [OpenAgentSkill Catalog](https://www.openagentskill.com/skills/everettfish-holo-card-studio)
 
 ## 分类标签
-`创意` `3D` `Blender` `Three.js` `收藏卡` `光栅卡` `全息卡` `AI绘画`
+`创意` `3D` `Blender` `Three.js` `收藏卡` `光栅卡` `全息卡` `AI绘画` `layered-holo-card`
