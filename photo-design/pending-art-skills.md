@@ -29,13 +29,13 @@
 - 推测方向：可能与 material art / zone 主题相关
 - 搜索状态：未找到确切匹配
 
-### 6. skill-make-photo-stamp
-- 来源：视频提及
-- 推测方向：照片转印章/图章效果
+### 6. skill-make-photo-stamp-archive
+- 来源：视频提及（第 18 项）
+- 推测方向：照片转印章/图章效果，带归档功能
 - 搜索状态：未找到确切匹配
 
 ### 7. photo-to-travel-sketch
-- 来源：视频提及
+- 来源：视频提及（第 10 项）
 - 推测方向：照片转旅行速写/素描
 - 搜索状态：未找到确切匹配（类似：Evianis/travel-photo-abstraction）
 
@@ -47,6 +47,46 @@
 ### 9. promptcard
 - 来源：@地球Online NPC 提及
 - 推测方向：prompt 卡片/模板工具
+- 搜索状态：未找到确切匹配
+
+### 10. Table-Skills
+- 来源：@一只桌子 提及
+- 推测方向：可能与表格/数据相关的 skill 集合
+- 搜索状态：未找到确切匹配
+
+### 11. neil-quentin
+- 来源：视频提及（第 12 项）
+- 推测方向：可能与人物/肖像风格相关
+- 搜索状态：未找到确切匹配
+
+### 12. kodak-2383-film-look
+- 来源：视频提及（第 13 项）
+- 推测方向：Kodak 2383 电影胶片风格模拟
+- 搜索状态：未找到确切 skill（类似：mono-color-skill 可部分实现）
+
+### 13. daily-photo-playground
+- 来源：视频提及（第 6 项）
+- 推测方向：每日照片 playground/实验场
+- 搜索状态：未找到确切匹配
+
+### 14. paper-spirit-zine
+- 来源：视频提及（第 7 项）
+- 推测方向：纸张精神/灵魂 Zine 风格
+- 搜索状态：未找到确切匹配
+
+### 15. photo-relic-editorial
+- 来源：视频提及（第 9 项）
+- 推测方向：照片遗物/ relic 编辑风格
+- 搜索状态：未找到确切匹配（类似：photo-abstract-editorial）
+
+### 16. pixel-style-poster-skill
+- 来源：视频提及（第 20 项）
+- 推测方向：像素风格海报 skill
+- 搜索状态：未找到确切匹配
+
+### 17. y2k-pop-poster
+- 来源：视频提及（第 1 项）
+- 推测方向：Y2K 千禧波普海报风格
 - 搜索状态：未找到确切匹配
 
 ## 建议
