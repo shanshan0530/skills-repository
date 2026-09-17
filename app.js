@@ -38,7 +38,6 @@ const grid=document.querySelector('#grid');
 const empty=document.querySelector('#empty');
 const searchInput=document.querySelector('#searchInput');
 const categoryNav=document.querySelector('#categoryNav');
-const resultTitle=document.querySelector('#resultTitle');
 const favoriteToggle=document.querySelector('#favoriteToggle');
 const sortSelect=document.querySelector('#sortSelect');
 const stats=document.querySelector('#stats');
