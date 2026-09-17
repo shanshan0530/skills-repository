@@ -271,6 +271,11 @@ body {
   position: sticky;
   top: 96px;
   height: max-content;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
 }
 
 .side-head {
