@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f4ef" />
+  <meta name="description" content="Sue's curated AI Skills Library" />
+  <title>Skill Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Skill Library 首页">
+      <span class="brand-mark">S</span>
+      <span>
+        <b>Skill Library</b>
+        <small>sue1231511 / skills-repository</small>
+      </span>
+    </a>
+    <div class="top-actions">
+      <a class="ghost-btn" href="https://github.com/sue1231511/skills-repository" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">CURATED AI SKILLS · UPDATED FROM REPOSITORY</p>
+      <h1>把有用的 Skill<br><span>收进一个能直接用的地方。</span></h1>
+      <p class="hero-copy">搜索、筛选、收藏，然后一键访问原项目。不是 Markdown 仓库坟场。</p>
+
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索 Skill、用途、标签…" />
+        <kbd>/</kbd>
+      </div>
+
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="workspace">
+      <aside class="sidebar">
+        <div class="side-head">分类</div>
+        <nav id="categoryNav" class="category-nav"></nav>
+        <div class="side-note">
+          <span class="dot"></span>
+          页面会读取仓库里的 Markdown，自动提取描述、标签和项目链接。
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="toolbar">
+          <div>
+            <p class="section-label">LIBRARY</p>
+            <h2 id="resultTitle">全部 Skill</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button id="favoriteToggle" class="filter-btn" type="button">☆ 收藏</button>
+            <select id="sortSelect" aria-label="排序">
+              <option value="default">默认排序</option>
+              <option value="az">名称 A–Z</option>
+              <option value="recent">最近访问</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="grid" class="skill-grid" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden>
+          <div>⌕</div>
+          <h3>没搜到</h3>
+          <p>换个词。别跟搜索框硬刚。</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="detailDialog" class="detail-dialog">
+    <button id="closeDialog" class="dialog-close" aria-label="关闭">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <footer>
+    <span>Skill Library</span>
+    <span>Built from your repository, not another dashboard template.</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
