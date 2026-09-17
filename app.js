@@ -25,13 +25,8 @@ const favorites=new Set(JSON.parse(localStorage.getItem('skill-favorites')||'[]'
 const visits=JSON.parse(localStorage.getItem('skill-visits')||'{}');
 
 const skills=files.map(([category,file],index)=>({
- id:`${category}/${file}`,
- category,file,index,
- name:humanize(file),
- description:'正在读取仓库说明…',
- tags:[],sourceUrl:'',
- docUrl:`https://github.com/${OWNER}/${REPO}/blob/${BRANCH}/${category}/${file}`,
- loaded:false
+ id:`${category}/${file}`,category,file,index,name:humanize(file),description:'正在读取仓库说明…',tags:[],sourceUrl:'',
+ docUrl:`https://github.com/${OWNER}/${REPO}/blob/${BRANCH}/${category}/${file}`,loaded:false
 }));
 
 const grid=document.querySelector('#grid');
@@ -47,9 +42,7 @@ const dialogContent=document.querySelector('#dialogContent');
 document.querySelector('#closeDialog').onclick=()=>dialog.close();
 dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
 
-function humanize(file){
- return file.replace(/\.md$/,'').split('-').map(s=>s.length<=3?s.toUpperCase():s[0].toUpperCase()+s.slice(1)).join(' ');
-}
+function humanize(file){return file.replace(/\.md$/,'').split('-').map(s=>s.length<=3?s.toUpperCase():s[0].toUpperCase()+s.slice(1)).join(' ')}
 function escapeHTML(s=''){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 function cleanText(s=''){return s.replace(/\*\*/g,'').replace(/`/g,'').replace(/\[(.*?)\]\((.*?)\)/g,'$1').trim()}
 
@@ -57,48 +50,23 @@ function parseMarkdown(md,skill){
  const lines=md.split(/\r?\n/);
  const heading=lines.find(l=>/^#\s+/.test(l));
  if(heading) skill.name=cleanText(heading.replace(/^#\s+/, '').split('｜')[0].trim());
-
  const funcIndex=lines.findIndex(l=>/^##\s+(功能描述|简介|描述|是什么)/.test(l));
  let desc='';
- if(funcIndex>=0){
-   for(let i=funcIndex+1;i<Math.min(lines.length,funcIndex+8);i++){
-     const line=lines[i].trim();
-     if(line && !line.startsWith('#') && !line.startsWith('-') && !line.startsWith('|')){desc=cleanText(line);break}
-   }
- }
- if(!desc){
-   const candidate=lines.find((l,i)=>i>0&&l.trim()&&!l.startsWith('#')&&!l.startsWith('-')&&!l.startsWith('|')&&!l.startsWith('```'));
-   if(candidate) desc=cleanText(candidate);
- }
+ if(funcIndex>=0){for(let i=funcIndex+1;i<Math.min(lines.length,funcIndex+8);i++){const line=lines[i].trim();if(line&&!line.startsWith('#')&&!line.startsWith('-')&&!line.startsWith('|')){desc=cleanText(line);break}}}
+ if(!desc){const candidate=lines.find((l,i)=>i>0&&l.trim()&&!l.startsWith('#')&&!l.startsWith('-')&&!l.startsWith('|')&&!l.startsWith('```'));if(candidate)desc=cleanText(candidate)}
  skill.description=desc||'已收录到你的 Skill Library。';
-
- const tags=[];
- const tagIndex=lines.findIndex(l=>/^##\s+分类标签/.test(l));
- if(tagIndex>=0){
-   for(let i=tagIndex+1;i<Math.min(lines.length,tagIndex+5);i++){
-     const matches=[...lines[i].matchAll(/`([^`]+)`/g)].map(m=>m[1]);
-     tags.push(...matches);
-   }
- }
+ const tags=[];const tagIndex=lines.findIndex(l=>/^##\s+分类标签/.test(l));
+ if(tagIndex>=0){for(let i=tagIndex+1;i<Math.min(lines.length,tagIndex+5);i++)tags.push(...[...lines[i].matchAll(/`([^`]+)`/g)].map(m=>m[1]))}
  skill.tags=[...new Set(tags)].slice(0,5);
-
  const urls=[...md.matchAll(/https?:\/\/[^\s)\]>]+/g)].map(m=>m[0].replace(/[.,]$/,''));
  const githubUrls=urls.filter(u=>/github\.com\//.test(u)&&!u.includes(`${OWNER}/${REPO}`));
  const external=urls.filter(u=>!ignoredExternalHosts.some(h=>u.includes(h))&&!u.includes(`${OWNER}/${REPO}`));
- skill.sourceUrl=githubUrls[0]||external[0]||'';
- skill.loaded=true;
+ skill.sourceUrl=githubUrls[0]||external[0]||'';skill.loaded=true;
 }
 
 async function hydrate(skill){
- try{
-   const url=`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${skill.id}`;
-   const res=await fetch(url,{cache:'no-store'});
-   if(!res.ok) throw new Error(res.status);
-   parseMarkdown(await res.text(),skill);
- }catch{
-   skill.description='打开仓库说明查看完整信息。';
-   skill.loaded=true;
- }
+ try{const url=`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${skill.id}`;const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw new Error(res.status);parseMarkdown(await res.text(),skill)}
+ catch{skill.description='打开仓库说明查看完整信息。';skill.loaded=true}
  render();
 }
 
@@ -113,70 +81,38 @@ function getFiltered(){
 }
 
 function cardHTML(s){
- const fav=favorites.has(s.id);
- const url=s.sourceUrl||s.docUrl;
+ const fav=favorites.has(s.id);const url=s.sourceUrl||s.docUrl;
  return `<article class="skill-card" data-id="${s.id}">
-   <div class="card-top">
-     <span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span>
-     <button class="star-btn ${fav?'active':''}" data-fav="${s.id}" aria-label="收藏 ${escapeHTML(s.name)}">${fav?'★':'☆'}</button>
-   </div>
+   <div class="card-top"><span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span><button class="star-btn ${fav?'active':''}" data-fav="${s.id}" aria-label="收藏 ${escapeHTML(s.name)}">${fav?'★':'☆'}</button></div>
    <h3>${escapeHTML(s.name)}</h3>
-   ${s.loaded?`<p>${escapeHTML(s.description)}</p>`:`<div class="loading-line" style="width:94%"></div><div class="loading-line" style="width:72%"></div>`}
+   ${s.loaded?`<p>${escapeHTML(s.description)}</p>`:`<div class="loading-line" style="width:92%"></div><div class="loading-line" style="width:70%"></div>`}
    ${s.tags.length?`<div class="tags">${s.tags.slice(0,3).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div>`:''}
-   <div class="card-actions">
-     <a class="visit-link" data-visit="${s.id}" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问 Skill ↗':'查看说明 ↗'}</a>
-     <button class="detail-btn" data-detail="${s.id}">详情</button>
-   </div>
+   <div class="card-actions"><a class="visit-link" data-visit="${s.id}" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问 Skill ↗':'查看说明 ↗'}</a><button class="detail-btn" data-detail="${s.id}">详情</button></div>
  </article>`;
 }
 
 function renderCategories(){
- const counts={all:skills.length};
- skills.forEach(s=>counts[s.category]=(counts[s.category]||0)+1);
+ const counts={all:skills.length};skills.forEach(s=>counts[s.category]=(counts[s.category]||0)+1);
  categoryNav.innerHTML=Object.keys(categoryNames).filter(k=>counts[k]).map(k=>`<button class="category-btn ${state.category===k?'active':''}" data-category="${k}"><span>${categoryNames[k]}</span><span>${counts[k]}</span></button>`).join('');
 }
 
 function render(){
- const list=getFiltered();
- grid.innerHTML=list.map(cardHTML).join('');
- empty.hidden=list.length!==0;
- grid.hidden=list.length===0;
- favoriteToggle.classList.toggle('active',state.favoritesOnly);
- favoriteToggle.textContent=state.favoritesOnly?'★ 收藏中':'☆ 收藏';
- const loaded=skills.filter(s=>s.loaded).length;
- const sourceCount=skills.filter(s=>s.sourceUrl).length;
- stats.innerHTML=`<span><b>${skills.length}</b>条目</span><span><b>${Object.keys(categoryNames).length-1}</b>分类</span><span><b>${sourceCount}</b>已解析原项目</span><span><b>${loaded}/${skills.length}</b>已读取</span>`;
+ const list=getFiltered();grid.innerHTML=list.map(cardHTML).join('');empty.hidden=list.length!==0;grid.hidden=list.length===0;
+ favoriteToggle.classList.toggle('active',state.favoritesOnly);favoriteToggle.textContent=state.favoritesOnly?'★ 收藏中':'☆ 收藏';
+ const loaded=skills.filter(s=>s.loaded).length;const sourceCount=skills.filter(s=>s.sourceUrl).length;
+ stats.innerHTML=`<span>条目<b>${skills.length}</b></span><span>分类<b>${Object.keys(categoryNames).length-1}</b></span><span>原项目<b>${sourceCount}</b></span><span>已读取<b>${loaded}/${skills.length}</b></span>`;
  bindCardEvents();
 }
 
 function bindCardEvents(){
- document.querySelectorAll('[data-fav]').forEach(btn=>btn.onclick=e=>{
-   e.preventDefault();
-   const id=btn.dataset.fav;
-   favorites.has(id)?favorites.delete(id):favorites.add(id);
-   localStorage.setItem('skill-favorites',JSON.stringify([...favorites]));
-   render();
- });
- document.querySelectorAll('[data-visit]').forEach(a=>a.onclick=()=>{
-   visits[a.dataset.visit]=Date.now();
-   localStorage.setItem('skill-visits',JSON.stringify(visits));
- });
+ document.querySelectorAll('[data-fav]').forEach(btn=>btn.onclick=e=>{e.preventDefault();const id=btn.dataset.fav;favorites.has(id)?favorites.delete(id):favorites.add(id);localStorage.setItem('skill-favorites',JSON.stringify([...favorites]));render()});
+ document.querySelectorAll('[data-visit]').forEach(a=>a.onclick=()=>{visits[a.dataset.visit]=Date.now();localStorage.setItem('skill-visits',JSON.stringify(visits))});
  document.querySelectorAll('[data-detail]').forEach(btn=>btn.onclick=()=>openDetail(btn.dataset.detail));
 }
 
 function openDetail(id){
- const s=skills.find(x=>x.id===id); if(!s)return;
- visits[id]=Date.now(); localStorage.setItem('skill-visits',JSON.stringify(visits));
- const url=s.sourceUrl||s.docUrl;
- dialogContent.innerHTML=`
-   <span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span>
-   <h2>${escapeHTML(s.name)}</h2>
-   <p>${escapeHTML(s.description)}</p>
-   <div class="detail-meta">${(s.tags.length?s.tags:['未标注标签']).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div>
-   <div class="dialog-actions">
-     <a class="primary-link" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问原项目':'打开说明'} ↗</a>
-     ${s.sourceUrl?`<a class="secondary-link" href="${s.docUrl}" target="_blank" rel="noreferrer">仓库说明</a>`:''}
-   </div>`;
+ const s=skills.find(x=>x.id===id);if(!s)return;visits[id]=Date.now();localStorage.setItem('skill-visits',JSON.stringify(visits));const url=s.sourceUrl||s.docUrl;
+ dialogContent.innerHTML=`<span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span><h2>${escapeHTML(s.name)}</h2><p>${escapeHTML(s.description)}</p><div class="detail-meta">${(s.tags.length?s.tags:['未标注标签']).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div><div class="dialog-actions"><a class="primary-link" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问原项目':'打开说明'} ↗</a>${s.sourceUrl?`<a class="secondary-link" href="${s.docUrl}" target="_blank" rel="noreferrer">仓库说明</a>`:''}</div>`;
  dialog.showModal();
 }
 
@@ -186,5 +122,4 @@ favoriteToggle.onclick=()=>{state.favoritesOnly=!state.favoritesOnly;render()};
 sortSelect.onchange=e=>{state.sort=e.target.value;render()};
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();searchInput.focus()}});
 
-renderCategories();render();
-Promise.allSettled(skills.map(hydrate));
+renderCategories();render();Promise.allSettled(skills.map(hydrate));
