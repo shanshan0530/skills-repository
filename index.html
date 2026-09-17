@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#f5f4ef" />
+  <meta name="theme-color" content="#f8f9fb" />
   <meta name="description" content="Sue's curated AI Skills Library" />
   <title>Skill Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -18,7 +18,7 @@
   <header class="topbar">
     <a class="brand" href="#" aria-label="Skill Library 首页">
       <span class="brand-mark">S</span>
-      <span>
+      <span class="brand-text">
         <b>Skill Library</b>
         <small>sue1231511 / skills-repository</small>
       </span>
@@ -60,7 +60,9 @@
             <h2 id="resultTitle">全部 Skill</h2>
           </div>
           <div class="toolbar-actions">
-            <button id="favoriteToggle" class="filter-btn" type="button">☆ 收藏</button>
+            <button id="favoriteToggle" class="filter-btn" type="button">
+              <span class="star">☆</span> 收藏
+            </button>
             <select id="sortSelect" aria-label="排序">
               <option value="default">默认排序</option>
               <option value="az">名称 A–Z</option>
@@ -71,7 +73,7 @@
 
         <div id="grid" class="skill-grid" aria-live="polite"></div>
         <div id="empty" class="empty" hidden>
-          <div>⌕</div>
+          <div class="empty-icon">⌕</div>
           <h3>没搜到</h3>
           <p>换个词。别跟搜索框硬刚。</p>
         </div>
