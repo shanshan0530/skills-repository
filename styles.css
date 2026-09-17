@@ -262,8 +262,9 @@ body {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
   gap: 48px;
-  padding-top: 0;
+  padding-top: 32px;
   padding-bottom: 60px;
+  align-items: start;
 }
 
 /* Sidebar */
@@ -274,7 +275,7 @@ body {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 0 20px 20px;
+  padding: 20px;
   box-shadow: var(--shadow-sm);
   margin-top: 0;
 }
