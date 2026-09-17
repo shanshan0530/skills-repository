@@ -24,5 +24,16 @@
 - [GitHub: Zeejay0/gathered-scenes-zine-skill](https://github.com/Zeejay0/gathered-scenes-zine-skill)
 - [Baader Skills Library](https://baaderagency.com/skills/s/zeejay0/gathered-scenes-zine-skill/scenes-gathered-zine-v1-3)
 
+## 补充说明
+利用scenes-gathered-zine-v1-3转化图片，注意以下事项：
+先判断照片的叙事焦点。
+根据焦点设计撕口，不预设照片必须占 35% 或 50%。
+允许只保留人物、局部水面或建筑群。
+撕口沿海岸、水线、树冠或建筑结构发展，与原始画面共同营造出空间和层次穿越感。
+摄影区域外的插画必须来自同一个场景。
+撕口附近先保留原照片色彩，再逐渐转成网点、干刷或丝网印刷。
+用一条连续色彩或运动轨迹跨越摄影和插画。
+明确禁止矩形贴图、均匀白边和数码蒙版感。
+
 ## 分类标签
 `照片处理` `拼贴` `Zine` `实景` `抽象` `艺术` `Codex` `scenes-gathered-zine`
