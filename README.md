@@ -1,8 +1,24 @@
 # Skills Repository ｜ Skill Library
 
+> **声明**：本仓库由 **sue1231511** 收集、整理并维护，所有 Skill 的版权与贡献归原作者所有。这里仅作为个人学习与分享的 Skill Library，方便快速检索和访问各类 AI、设计与开发资源。
+
 这是一个用于收集、整理和快速访问 AI Skill、设计资源、提示词与开源工具的个人仓库。
 
 现在仓库同时提供一个可视化 **Skill Library**：支持搜索、分类筛选、收藏、最近访问，并会自动读取各 Markdown 条目中的简介、标签和原项目链接。
+
+## 致谢
+
+感谢以下作者与社区为本仓库提供优秀的 Skill 与灵感：
+
+- **cxxCoolStar** — `github-idea-finder`
+- **greensock** — `gsap` (GSAP Skills)
+- **TaiT-tt** — `tait-crt-interface`
+- **HsMirage** — `AIPlanHub`
+- **Orchestra-Research** — AI Research Skills Library 相关条目
+- **MaxKmet** — `idea-validation-agents` 相关灵感
+- 以及其他所有在 GitHub 与 Skill 社区中分享知识的作者。
+
+> 如果你发现自己的作品被收录并希望调整信息，请提交 Issue 或 PR，我会尽快更新。
 
 ## Web UI
 
@@ -33,7 +49,7 @@
 | `ai-tools/` | AI 工具与平台 |
 | `chrome-extensions/` | Chrome 扩展 |
 | `tools/` | 其他通用工具 |
-
+| `notes/` | 待确认线索与备忘（不进入 Web UI 正式列表） |\n
 ## 条目规范
 
 每个资源仍以一个 Markdown 文件保存。推荐结构：
@@ -63,6 +79,8 @@
 
 Web UI 会自动解析：一级标题、功能描述、分类标签，以及第一个有效的 GitHub / 外部项目链接。因此新增条目时不需要再手工写一张网页卡片。
 
+> **命名约定**：文件名统一使用小写字母、连字符分隔，格式为 `xxx.md`，避免使用 `xxx-skill.md` 或 `skill-xxx.md`。
+
 ## 使用方式
 
 1. 按分类找到合适的 Skill。
@@ -73,4 +91,7 @@ Web UI 会自动解析：一级标题、功能描述、分类标签，以及第�
 
 ## 贡献
 
-发现新的 Skill 可以直接按现有分类新增 Markdown。信息暂未核实的条目请明确标注“待确认”，避免把推测写成事实。
+发现新的 Skill 可以直接按现有分类新增 Markdown。信息暂未核实的条目请明确标注“待确认”，或放入 `notes/pending-art-skills.md` 收集线索，避免把推测写成事实。
+
+```
+```
