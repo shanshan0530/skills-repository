@@ -141,7 +141,6 @@ function render(){
  grid.innerHTML=list.map(cardHTML).join('');
  empty.hidden=list.length!==0;
  grid.hidden=list.length===0;
- resultTitle.textContent=state.favoritesOnly?'我的收藏':(state.category==='all'?'全部 Skill':categoryNames[state.category]);
  favoriteToggle.classList.toggle('active',state.favoritesOnly);
  favoriteToggle.textContent=state.favoritesOnly?'★ 收藏中':'☆ 收藏';
  const loaded=skills.filter(s=>s.loaded).length;
