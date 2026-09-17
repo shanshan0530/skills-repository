@@ -98,7 +98,7 @@ function renderCategories(){
 
 function render(){
  const list=getFiltered();grid.innerHTML=list.map(cardHTML).join('');empty.hidden=list.length!==0;grid.hidden=list.length===0;
- favoriteToggle.classList.toggle('active',state.favoritesOnly);favoriteToggle.textContent=state.favoritesOnly?'★ 收藏中':'☆ 收藏';
+ favoriteToggle.classList.toggle('active',state.favoritesOnly);favoriteToggle.textContent=state.favoritesOnly?'收藏中':'收藏';
  const loaded=skills.filter(s=>s.loaded).length;const sourceCount=skills.filter(s=>s.sourceUrl).length;
  stats.innerHTML=`<span>条目<b>${skills.length}</b></span><span>分类<b>${Object.keys(categoryNames).length-1}</b></span><span>原项目<b>${sourceCount}</b></span><span>已读取<b>${loaded}/${skills.length}</b></span>`;
  bindCardEvents();
