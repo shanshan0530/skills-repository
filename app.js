@@ -5,7 +5,7 @@ const BRANCH='main';
 const files=[
 ['ai-prompts','grill-me.md'],['ai-prompts','prompt-optimizer.md'],
 ['ai-tools','AIPlanHub.md'],['chrome-extensions','ciphermind.md'],
-['creative-visual','tait-crt-interface.md'],['creative-visual','photo-flipbook-ui.md'],
+['creative-visual','holo-card-studio.md'],['creative-visual','photo-flipbook-ui.md'],['creative-visual','tait-crt-interface.md'],
 ['design-tools','impeccable.md'],
 ['frontend-design','21st-dev.md'],['frontend-design','awesome-design-md.md'],['frontend-design','design-mobile-apps.md'],['frontend-design','design-taste-frontend.md'],['frontend-design','gsap.md'],['frontend-design','image-to-code.md'],['frontend-design','motion-sites.md'],['frontend-design','motion-web.md'],['frontend-design','react-bits.md'],['frontend-design','refero-styles.md'],['frontend-design','threeui.md'],['frontend-design','web-design-guidelines.md'],
 ['methodology','lighthouse-travel-postcard-prompt.md'],['methodology','vibe-coding-approach.md'],['methodology','zeejay0-visual-skill-example.md'],
