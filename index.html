@@ -9,20 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles-v2.css?v=20260918-1" />
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#" aria-label="Skill Library 首页">
       <span class="brand-mark">S</span>
-      <span class="brand-text">
-        <b>Skill Library</b>
-        <small>sue1231511 / skills-repository</small>
-      </span>
+      <span class="brand-text"><b>Skill Library</b><small>sue1231511 / skills-repository</small></span>
     </a>
     <a class="github-link" href="https://github.com/sue1231511/skills-repository" target="_blank" rel="noreferrer">GitHub ↗</a>
   </header>
-
   <main class="page-shell">
     <section class="intro">
       <div class="intro-copy">
@@ -32,50 +28,24 @@
       </div>
       <div class="intro-meta" id="stats"></div>
     </section>
-
     <section class="control-bar" aria-label="Skill 控制栏">
       <label class="search-box" for="searchInput">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
         <input id="searchInput" type="search" autocomplete="off" placeholder="搜索名称、用途、标签" />
         <kbd>/</kbd>
       </label>
-
       <div class="control-actions">
         <button id="favoriteToggle" class="control-btn" type="button">☆ 收藏</button>
-        <select id="sortSelect" class="sort-select" aria-label="排序">
-          <option value="default">默认排序</option>
-          <option value="az">名称 A–Z</option>
-          <option value="recent">最近访问</option>
-        </select>
+        <select id="sortSelect" class="sort-select" aria-label="排序"><option value="default">默认排序</option><option value="az">名称 A–Z</option><option value="recent">最近访问</option></select>
       </div>
     </section>
-
     <section class="library-layout">
-      <aside class="sidebar" aria-label="分类">
-        <div class="sidebar-title">分类</div>
-        <nav id="categoryNav" class="category-nav"></nav>
-      </aside>
-
-      <section class="library-content">
-        <div id="grid" class="skill-grid" aria-live="polite"></div>
-        <div id="empty" class="empty" hidden>
-          <strong>没搜到</strong>
-          <span>换个词。别跟搜索框较劲。</span>
-        </div>
-      </section>
+      <aside class="sidebar" aria-label="分类"><div class="sidebar-title">分类</div><nav id="categoryNav" class="category-nav"></nav></aside>
+      <section class="library-content"><div id="grid" class="skill-grid" aria-live="polite"></div><div id="empty" class="empty" hidden><strong>没搜到</strong><span>换个词。别跟搜索框较劲。</span></div></section>
     </section>
   </main>
-
-  <dialog id="detailDialog" class="detail-dialog">
-    <button id="closeDialog" class="dialog-close" aria-label="关闭">×</button>
-    <div id="dialogContent"></div>
-  </dialog>
-
-  <footer class="footer">
-    <span>Skill Library</span>
-    <span>Curated from the repository.</span>
-  </footer>
-
-  <script src="./app.js"></script>
+  <dialog id="detailDialog" class="detail-dialog"><button id="closeDialog" class="dialog-close" aria-label="关闭">×</button><div id="dialogContent"></div></dialog>
+  <footer class="footer"><span>Skill Library</span><span>Curated from the repository.</span></footer>
+  <script src="./app.js?v=20260918-1"></script>
 </body>
 </html>
