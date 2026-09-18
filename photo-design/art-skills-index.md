@@ -4,7 +4,7 @@
 
 | # | Skill | 仓库 | 分类 |
 |---|---|---|---|
-| 1 | surreal-pop-collage | 2998980-hue/surreal-pop-collage | 波普拼贴 |
+| 1 | surreal-pop-collage | 2998980-hue/surreal-pop-collage（已验证） | 波普拼贴 |
 | 2 | photo-riso-poster | yanliudesign/mono-color-skill | Riso 海报 |
 | 3 | eastern-ink-photo | konanok/photo-skills | 东方水墨 |
 | 4 | selective-ink-sketch | yanliudesign/mono-color-skill | 墨水素描 |
