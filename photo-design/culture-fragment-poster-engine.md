@@ -1,8 +1,9 @@
 # Culture Fragment Poster Engine ｜ 文化海报引擎
 
 ## 仓库
-- ** dacnay816y62-hub/culture-fragment-poster-engine**
-- 作者：梵想美学（@AesthAI）
+- ** dacnay816y62-hub/culture-fragment-poster-engine**（已验证存在）
+- 作者：梵想美学（@AesthAI / @dacnay816y62-hub）
+- 抖音/小红书同名，GitHub 789 followers
 
 ## 功能描述
 把文化素材整理成可追溯的视觉线索，再转译成品牌 KV、海报、封面与可执行提示词。
