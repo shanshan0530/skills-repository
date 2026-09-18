@@ -23,6 +23,8 @@
 ## 链接
 - [GitHub: Hchen1218/heytea-style](https://github.com/Hchen1218/heytea-style)
 - [Cola Skill 页面](https://colaskill.com/heytea-style)
+- [Skills REST 页面](https://skills.rest/repo/Hchen1218/heytea-style)
+- [图灵悖论·Photo Skills 档案](https://ps.galegram.com/skill/s42_heytea-style)
 
 ## 分类标签
-`照片处理` `海报` `喜茶风格` `儿童简笔画` `手写` `设计`
+`照片处理` `海报` `喜茶风格` `儿童简笔画` `手写` `设计` `桌宠` `Codex`
