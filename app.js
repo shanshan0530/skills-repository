@@ -25,7 +25,7 @@ const favorites=new Set(JSON.parse(localStorage.getItem('skill-favorites')||'[]'
 const visits=JSON.parse(localStorage.getItem('skill-visits')||'{}');
 
 const skills=files.map(([category,file],index)=>({
- id:`${category}/${file}`,category,file,index,name:humanize(file),description:'正在读取仓库说明…',tags:[],sourceUrl:'',
+ id:`${category}/${file}`,category,file,index,name:humanize(file),description:'正在读取仓库说明…',tags:[],details:[],sourceUrl:'',
  docUrl:`https://github.com/${OWNER}/${REPO}/blob/${BRANCH}/${category}/${file}`,loaded:false
 }));
 
