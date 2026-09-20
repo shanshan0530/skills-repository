@@ -125,7 +125,8 @@ function bindCardEvents(){
 
 function openDetail(id){
  const s=skills.find(x=>x.id===id);if(!s)return;visits[id]=Date.now();localStorage.setItem('skill-visits',JSON.stringify(visits));const url=s.sourceUrl||s.docUrl;
- dialogContent.innerHTML=`<span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span><h2>${escapeHTML(s.name)}</h2><p>${escapeHTML(s.description)}</p><div class="detail-meta">${(s.tags.length?s.tags:['未标注标签']).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div><div class="dialog-actions"><a class="primary-link" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问原项目':'打开说明'} ↗</a>${s.sourceUrl?`<a class="secondary-link" href="${s.docUrl}" target="_blank" rel="noreferrer">仓库说明</a>`:''}</div>`;
+ const detailHTML=(s.details||[]).map(section=>`<section class="dialog-section"><h3>${escapeHTML(section.title)}</h3>${section.items?.length?`<ul>${section.items.map(item=>`<li>${escapeHTML(item)}</li>`).join('')}</ul>`:`<p>${escapeHTML(section.text||'')}</p>`}</section>`).join('');
+ dialogContent.innerHTML=`<div class="dialog-scroll"><div class="dialog-header"><span class="category-pill">${escapeHTML(categoryNames[s.category]||s.category)}</span><h2>${escapeHTML(s.name)}</h2><p class="dialog-lead">${escapeHTML(s.description)}</p><div class="detail-meta">${(s.tags.length?s.tags:['未标注标签']).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div></div>${detailHTML||`<section class="dialog-section"><h3>收录说明</h3><p>当前条目还没有更多结构化说明，可以打开仓库文档查看原始记录。</p></section>`}<div class="dialog-actions"><a class="primary-link" href="${escapeHTML(url)}" target="_blank" rel="noreferrer">${s.sourceUrl?'访问原项目':'打开说明'} ↗</a>${s.sourceUrl?`<a class="secondary-link" href="${s.docUrl}" target="_blank" rel="noreferrer">仓库说明</a>`:''}</div></div>`;
  dialog.showModal();
 }
 
