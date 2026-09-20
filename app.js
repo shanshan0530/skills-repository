@@ -58,6 +58,19 @@ function parseMarkdown(md,skill){
  const tags=[];const tagIndex=lines.findIndex(l=>/^##\s+分类标签/.test(l));
  if(tagIndex>=0){for(let i=tagIndex+1;i<Math.min(lines.length,tagIndex+5);i++)tags.push(...[...lines[i].matchAll(/`([^`]+)`/g)].map(m=>m[1]))}
  skill.tags=[...new Set(tags)].slice(0,5);
+ const detailHeadings=/^(?:#{2,3})\s+(核心特性|核心能力|适用场景|触发方式|使用方式|使用建议|特点|工作方式|安装方式|仓库)$/;
+ const details=[];
+ for(let i=0;i<lines.length;i++){
+   const match=lines[i].trim().match(detailHeadings);if(!match)continue;
+   const title=match[1];const items=[];let text='';
+   for(let j=i+1;j<lines.length;j++){
+     const line=lines[j].trim();if(/^#{2,3}\s+/.test(line))break;if(!line)continue;
+     if(/^[-*]\s+/.test(line))items.push(cleanText(line.replace(/^[-*]\s+/,'')));
+     else if(!line.startsWith('|')&&!line.startsWith('```')&&!text)text=cleanText(line);
+   }
+   if(items.length||text)details.push({title,items:items.slice(0,6),text});
+ }
+ skill.details=details.slice(0,4);
  const urls=[...md.matchAll(/https?:\/\/[^\s)\]>]+/g)].map(m=>m[0].replace(/[.,]$/,''));
  const githubUrls=urls.filter(u=>/github\.com\//.test(u)&&!u.includes(`${OWNER}/${REPO}`));
  const external=urls.filter(u=>!ignoredExternalHosts.some(h=>u.includes(h))&&!u.includes(`${OWNER}/${REPO}`));
