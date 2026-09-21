@@ -84,11 +84,13 @@
 
 ---
 
-## design-tools/（1个）
+## design-tools/（3个）
 
 | Skill | 仓库 | 备注 |
 |---|---|---|
 | Impeccable | `pbakaus/impeccable` | 40k+ stars，已集成 Copilot |
+| MetalForge | 官网 metalforge.xyz | SwiftUI / React Native 可视化 Shader 编辑器，Freemium |
+| Better Design | `marvkr/better-design` | MIT，设计 MCP + 可安装 Skill |
 
 ---
 
@@ -153,4 +155,4 @@
 
 ---
 
-*最后更新：2026-09-21*
+*最后更新：2026-09-22*
