@@ -51,6 +51,12 @@
 | `ai-tools/` | AI 工具与平台 |
 | `chrome-extensions/` | Chrome 扩展 |
 | `tools/` | 其他通用工具 |
+| `agent-memory/` | Agent 记忆、知识图谱与长期记忆基建 |
+| `web-scraping/` | 爬虫、反爬对抗与 LLM 数据采集 |
+| `voice-tts/` | 语音合成、实时翻译与语音工作室 |
+| `virtual-companion/` | AI 虚拟主播、桌宠与陪伴应用 |
+| `games/` | 游戏引擎、数值系统与 LLM 互动玩法 |
+| `marketing-growth/` | 营销技能包、SEO 与增长工具 |
 | `notes/` | 待确认线索与备忘（不进入 Web UI 正式列表） |\n
 ## 条目规范
 
