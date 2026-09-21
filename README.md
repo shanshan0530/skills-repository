@@ -16,6 +16,7 @@
 - **HsMirage** — `AIPlanHub`
 - **Orchestra-Research** — AI Research Skills Library 相关条目
 - **MaxKmet** — `idea-validation-agents` 相关灵感
+- **icejyzy0430** — `open-model-workbench`
 - 以及其他所有在 GitHub 与 Skill 社区中分享知识的作者。
 
 > 如果你发现自己的作品被收录并希望调整信息，请提交 Issue 或 PR，我会尽快更新。
