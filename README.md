@@ -103,12 +103,6 @@ Web UI 会自动解析：一级标题、功能描述、分类标签，以及第�
 
 ---
 
-## 参考资源
-
-- [OpenPrice - AI 服务卡券价格对比](https://www.openprice.cc/card-products/all?platform=Gemini)
-
----
-
 收录备忘:
 
 - 新增前习惯性查一下来源能不能打开、内容能不能对上，纯截图或聊天记录一般不直接收
