@@ -23,10 +23,12 @@
 | ThreeUI | `MengTo/threeui` | MIT v1.2.0 |
 | Web Design Guidelines | `vercel-labs/agent-skills` | Vercel 官方 |
 | Zero to Interface | `Wanyi4424/zero-to-interface` | 设计流程 |
+| UI Layouts | 官网 ui-layouts.com | 组件 + 100+ 区块，shadcn 兼容 |
+| Yuanpu 源铺 | 官网 yuanpu.cc | 人工设计付费模板源码站 |
 
 ---
 
-## photo-design/（15个，含2个待确认）
+## photo-design/（20个，含2个待确认）
 
 | Skill | 仓库 | 状态 |
 |---|---|---|
@@ -49,6 +51,7 @@
 | Travel Memory Sticker | `carolinaaafy/travel-memory-sticker-card` | ✅ 519 stars |
 | Travel Photo Abstraction | `Evianis/travel-photo-abstraction` | ✅ 758 stars |
 | Vinyl Image Generator | `mp3li/Cover2Disc` | ✅ |
+| Source Engine Photo | 群聊收集提示词 | ✅ 无独立仓库 |
 
 ---
 
@@ -89,13 +92,14 @@
 
 ---
 
-## ai-prompts/（3个）
+## ai-prompts/（4个）
 
 | Skill | 仓库 | 备注 |
 |---|---|---|
 | Chief Work Buddy | `sue1231511/dev-guidelines-skill` | 自有 |
 | Grill-Me | `mattpocock/skills` | 知名 skill |
 | Prompt Optimizer | `Samuel-Shek/prompt-optimizer-skill` | 多平台适配 |
+| Debug Two Modes | 原创整理（群聊收集） | 报错先诊断后修复双版提示词 |
 
 ---
 
@@ -119,13 +123,14 @@
 
 ---
 
-## ai-tools/（3个）
+## ai-tools/（4个）
 
 | Skill | 仓库 | 备注 |
 |---|---|---|
 | AIPlanHub | HsMirage（概念项目） | 无独立仓库，补充现有仓库 |
 | GitHub Idea Finder | `cxxCoolStar/github-idea-finder` | 开源发现 |
 | VoiceStudio | `debpalash/VoiceStudio` | 32k+ stars |
+| Open Model Workbench | `icejyzy0430/open-model-workbench` | 3D 构图工作台 Skill，MIT |
 
 ---
 
@@ -148,4 +153,4 @@
 
 ---
 
-*最后更新：2026-09-18*
+*最后更新：2026-09-21*
